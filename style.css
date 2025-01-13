@@ -24,7 +24,8 @@ body {
   height: 100vh;
   font-family: "Figtree", sans-serif;
   color: var(--gray-950);
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 h2,
@@ -50,6 +51,7 @@ main {
   width: 100%;
   height: 100%;
   background-color: var(--yellow);
+  flex-grow: 1;
 }
 
 section {
@@ -132,9 +134,8 @@ section {
 .attribution {
   font-size: 11px;
   text-align: center;
-  position: absolute;
-  bottom: 5rem;
-  left: calc(50% - 170px);
+  width: 100%;
+  margin-top: auto;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
