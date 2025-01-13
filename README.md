@@ -62,15 +62,16 @@ The `clamp()` function ensures:
 
 The CSS used:
 
-````css
+```css
 font-size: clamp(12px, calc(12px + (100vw - 375px) * 0.001878), 14px);
+```
 
-
-```markdown
 ## How the Calculation Works
 
 ### 1. Font Size Change Rate
+
 We calculate the rate at which the font size changes as the viewport grows:
+
 - **Font Size Range**: `14px - 12px = 2px`
 - **Viewport Range**: `1440px - 375px = 1065px`
 - **Change Rate**: `2px / 1065px ≈ 0.001878`
@@ -78,19 +79,21 @@ We calculate the rate at which the font size changes as the viewport grows:
 This means the font size increases by approximately `0.001878px` for every `1px` increase in the viewport width.
 
 ### 2. Dynamic Font Scaling
+
 Using the rate of change, we calculate the dynamic portion of the font size:
+
 ```css
 calc(12px + (100vw - 375px) * 0.001878)
+```
 
-
-```markdown
 ### 3. Combining with `clamp()`
+
 Finally, we use `clamp()` to enforce a minimum (`12px`) and maximum (`14px`) size:
+
 ```css
 font-size: clamp(12px, calc(12px + (100vw - 375px) * 0.001878), 14px);
-
+```
 
 ## Author
 
 - Frontend Mentor - [@tonmoysarker](https://www.frontendmentor.io/profile/tonmoysarker)
-````
