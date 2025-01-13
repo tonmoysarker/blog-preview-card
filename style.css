@@ -12,6 +12,7 @@ html {
 body {
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 
 main {
@@ -35,6 +36,9 @@ align-items: center;
     max-width: 385px;
     padding: 1.5rem;
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .blog-card__image{
@@ -46,6 +50,9 @@ align-items: center;
 .attribution {
   font-size: 11px;
   text-align: center;
+  position: absolute;
+  bottom: 5rem;
+  left: calc(50% - 170px);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
